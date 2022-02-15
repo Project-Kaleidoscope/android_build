@@ -5433,6 +5433,43 @@ KSCOPE_TARGET_PACKAGE := $(PRODUCT_OUT)/$(KSCOPE_VERSION).zip
 bacon: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(KSCOPE_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(KSCOPE_TARGET_PACKAGE) > $(KSCOPE_TARGET_PACKAGE).md5sum
+	BLUE=$(tput setaf 4)
+	GREEN=$(tput setaf 2)
+	ORANGE=$(tput setaf 202)
+	RED=$(tput setaf 1)
+	RESET=$(tput sgr0)
+	echo -e "${RED}==================================================${RESET}"
+	echo -e ""
+	echo -e "                      ${BLUE}*****${RESET}"
+	echo -e "                    ${BLUE}***   ***${RESET}"
+	echo -e "                  ${BLUE}***       ***${RESET}"
+	echo -e "       ${BLUE}************            ************${RESET}"
+	echo -e "     ${BLUE}***         ***           **        ${RESET}${GREEN}***${RESET}"
+	echo -e "     ${BLUE}***           ***         **      ${RESET}${GREEN}  ***${RESET}"
+	echo -e "     ${BLUE}***             ***       **    ${RESET}${GREEN}    ***${RESET}"
+	echo -e "     ${BLUE}***               ***     **  ${RESET}${GREEN}      ***${RESET}"
+	echo -e "     ${BLUE}***                 ***   **${RESET}${GREEN}        ***${RESET}"
+	echo -e "    ${BLUE}*****                  *** ${RESET}${GREEN}**       *****${RESET}"
+	echo -e "  ${BLUE}***   ***                  ${RESET}${GREEN}****     ***   ***${RESET}"
+	echo -e "${BLUE}***       ***              ${RESET}${GREEN}    ***  ***       ***${RESET}"
+	echo -e "${BLUE}*           ***          ${RESET}${GREEN}        ****           *${RESET}"
+	echo -e "${BLUE}**         ******      ${RESET}${GREEN}            ***         **${RESET}"
+	echo -e "  ${BLUE}***     ***    *** ${RESET}${GREEN}                ***    ***${RESET}"
+	echo -e "   ${BLUE}*** ***      ***${RESET}${GREEN}**                  *** ***${RESET}"
+	echo -e "     ${BLUE}***        *${RESET}${GREEN}*  ***                  ***${RESET}"
+	echo -e "     ${BLUE}***       ${RESET}${GREEN} **    ***                ***${RESET}"
+	echo -e "     ${BLUE}***     ${RESET}${GREEN}   **      ***              ***${RESET}"
+	echo -e "     ${BLUE}***   ${RESET}${GREEN}     **        ***            ***${RESET}"
+	echo -e "     ${BLUE}*** ${RESET}${GREEN}       **          ***          ***${RESET}"
+	echo -e "      ${GREEN}************            ************${RESET}"
+	echo -e "                  ${GREEN}***       ***${RESET}"
+	echo -e "                    ${GREEN}***   ***${RESET}"
+	echo -e "                      ${GREEN}*****${RESET}"
+	echo -e ""
+	echo -e "${RED}=================================================${RESET}"
+	echo -e "${ORANGE}      One million eyes, one million worlds.${RESET}"
+	echo -e "${RED}=================================================${RESET}"
+	echo -e ""
 	@echo "**Package complete"**: $(KSCOPE_TARGET_PACKAGE)"
 
 ifeq ($(BOARD_BUILD_RETROFIT_DYNAMIC_PARTITIONS_OTA_PACKAGE),true)
